@@ -14,4 +14,9 @@ db = DBConnection(config["databaseHost"],
                   config["databaseUser"], config["databasePassword"], config["databaseName"])
 
 db.saveMessages(messages)
+
+# Marcando los mensajes como leídos en el servor de correo
+print("Marcando mensajes como leídos")
+mailRead.markAsRed(messages)
+
 print("Tarea concluida")
